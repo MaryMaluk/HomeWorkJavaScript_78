@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Work 78 jQuery</title>
+	<meta charset="UTF-8">
+    <script src="jquery.js"></script>
+    <script>
+
+
+        $(document).ready(function () {
+
+            $('#first').on('click', firstButtonHandler);
+            $('#second').on('click', secondButtonHandler);
+			$('#third').on('click', thirdButtonHandler);
+            var div1 = $('#div1');
+                div2 = $('#div2');
+				div3 = $('#div3');
+				
+            function firstButtonHandler() {
+                div1.removeClass();
+                div1.addClass("class1");
+				div2.addClass("class11");
+				div3.addClass("class11");
+            }
+
+            function secondButtonHandler() {
+			    
+	            div1.addClass("class11");
+				div3.addClass("class11");
+				div2.removeClass();
+                div2.addClass("class2");
+			  }	
+
+			  function thirdButtonHandler() {
+	            div1.addClass("class11");
+				div2.addClass("class11");
+				div3.removeClass();
+                div3.addClass("class3");
+			  }	
+        });
+
+    </script>
+
+    <style>
+        .class1 {
+            font-family: Tahoma;
+            color: Blue;
+		
+        }
+		
+		.class11 {
+            display: none;
+        }
+
+        .class2 {
+            font-family: Courier New;
+            color: Red;
+        }
+		.class3 {
+            font-family: Arial;
+            color: Green;
+        }
+    </style>
+</head>
+<body>
+    <input id="first" type="button" value="Oscar-Claude Monet" />
+    <input id="second" type="button" value="Vincent Willem van Gogh" />
+	<input id="third" type="button" value="Salvador Dalí " />
+    <div id="div1" class="class1">
+           - французский живописец, один из основателей импрессионизма.
+    </div>
+	<div id="div2" class="class11">
+	- нидерландский художник-постимпрессионист.
+	</div>
+	<div id="div3" class="class11">
+	- испанский живописец, график, скульптор, режиссёр, писатель. Один из самых известных представителей сюрреализма.
+	</div>
+	
+</body>
+</html>
